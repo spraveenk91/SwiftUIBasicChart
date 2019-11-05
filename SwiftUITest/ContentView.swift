@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     
     @State var selectedIndex = 0
-    
     @State var dataPoints: [[ChartValue]] = [
         [ChartValue(day: "S", value: 25), ChartValue(day: "M", value: 50), ChartValue(day: "T", value: 75), ChartValue(day: "W", value: 100), ChartValue(day: "T", value: 125), ChartValue(day: "F", value: 150), ChartValue(day: "S", value: 175)],
 
@@ -23,7 +22,6 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        
         NavigationView {
             ZStack {
                 Color(#colorLiteral(red: 0.117543973, green: 0.2897527516, blue: 0.4028342962, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -47,17 +45,14 @@ struct ContentView: View {
                         .padding(20)
                 }
             }
-            
             .navigationBarTitle("Health Data", displayMode: .inline)
         }
     }
 }
 
 struct ChartDataPoint: View {
-    
     var value: CGFloat
     var dayValue: String
-    
     var body: some View {
         VStack {
             ZStack (alignment: .bottom) {
